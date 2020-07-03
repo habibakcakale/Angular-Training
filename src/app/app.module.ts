@@ -2,10 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
-import { ServicesModule } from './pages/services/services.module'
-import { ServiceListComponent } from './pages/services/service-list.component';
-import { ServiceDetail } from './pages/services/service-detail.component';
+import { RouterModule } from '@angular/router';;
 import { MasterComponent } from "./shared/master.component"
 import { CommonModule } from '@angular/common';
 
@@ -24,19 +21,9 @@ import { CommonModule } from '@angular/common';
       {
         path: "services",
         component: MasterComponent,
-        children: [
-          {
-            path: "", pathMatch: "full",
-            component: ServiceListComponent
-          },
-          {
-            path: ":id",
-            component: ServiceDetail
-          }
-        ]
+        loadChildren: () => import("./pages/services/services.module").then(m => m.ServicesModule)
       }
-    ]),
-    ServicesModule
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

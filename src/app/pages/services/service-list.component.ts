@@ -9,7 +9,7 @@ export class ServiceListComponent implements OnInit, OnDestroy {
         console.log("ServiceListComponent Destroyed ")
     }
     ngOnInit(): void {
-        throw new Error("ServiceListComponent Init.");
+        console.log("ServiceListComponent Init.");
     }
 
 }
