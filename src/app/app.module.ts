@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';;
-import { MasterComponent } from "./shared/master.component"
+import { MasterComponent } from "./components/master.component"
 import { CommonModule } from '@angular/common';
-
+import { AgGridModule } from 'ag-grid-angular';
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,6 +15,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     BrowserModule,
     CommonModule,
+    HttpClientModule,
+    AgGridModule.withComponents([]),
     RouterModule.forRoot([
       {
         path: "", pathMatch: "full", redirectTo: "services"

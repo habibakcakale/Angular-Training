@@ -3,13 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Amatis-TEst": {
+    "Angular-Training": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "inlineTemplate": true,
           "inlineStyle": true,
-          "style": "less",
+          "style": "scss",
           "skipTests": true
         },
         "@schematics/angular:class": {
@@ -52,7 +52,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.scss"
             ],
             "scripts": [
               "src/assets/jquery-3.5.1.min.js",

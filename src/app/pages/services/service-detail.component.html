@@ -1,1 +1,20 @@
-Service Deta'l Component
+<form #form="ngForm">
+    <div class="form-group" *ngIf="service.id>0">
+        <label for="id-field">Id</label>
+        <input type="text" required name="id-field" [(ngModel)]='service.id' class="form-control" id="id-field"
+            placeholder="Enter id-field">
+    </div>
+    <div class="form-group">
+        <label for="first">First Name</label>
+        <input type="text" required name="first-name" [(ngModel)]='service.customer.firstName' class="form-control"
+            id="first" placeholder="Enter first name">
+    </div>
+    <div class="form-group">
+        <label for="last-name">Password</label>
+        <input type="text" required name="last-name" #firstName='ngModel' [(ngModel)]="service.customer.lastName"
+            class="form-control" id="last-name" placeholder="Last Name">
+        <summary class="danger">Last Name Required</summary>
+    </div>
+    <button type="submit" [disabled]="!form.valid" class="btn btn-primary"
+        (click)="updateCustomer(service)">Submit</button>
+</form>

@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-/*!
- * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/templates/simple-sidebar)
- * Copyright 2013-2020 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
- */
+@import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+
+.ag-theme-alpine {
+    @include ag-theme-alpine();
+}
 
  #wrapper {
     overflow-x: hidden;
